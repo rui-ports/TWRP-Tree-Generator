@@ -19,6 +19,7 @@ env:
   PRODUCT_IMAGE: false
   OPPRODUCT_IMAGE: false
   WHOLE_VENDOR: false
+  Codename:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,7 +42,7 @@ jobs:
         
        - name: Making
          run: |
-              git clone https://github.com/SebaUbuntu/TWRP-device-tree-generator
+              git clone https://github.com/rui-ports/TWRP-device-tree-generator
               sudo chmod +x TWRP-device-tree-generator
               cd TWRP-device-tree-generator
               sudo ./start.sh --cli
